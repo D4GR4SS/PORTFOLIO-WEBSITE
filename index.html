@@ -11,8 +11,16 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css"
+      integrity="sha512-CWRnZlthFAu05mm4Pu5R/ikDV/2jPo6cgmkpdtBFWUY9/mqNFuTmgwnpBWqDiIeMdn5wv1NEQFdt82/Ak+uzkg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -22,5 +30,109 @@
     <script defer src="assets/js/main.js"></script>
     <title>Davide Grassitelli Portofolio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav_logo"> Davide. </a>
+
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list grid">
+            <li class="nav_item">
+              <a href="#home" class="nav_link active-link">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#skills" class="nav_link">
+                <i class="fas fa-mouse"></i> Skills
+              </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#projects" class="nav_link">
+                <i class="fas fa-folder"></i> Projects
+              </a>
+            </li>
+            <li class="nav_item">
+              <a href="#contact" class="nav_link">
+                <i class="fas fa-envelope-open"></i> Contact
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav_close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <div class="nav_buttons">
+          <i class="far fa-moon change-theme" id="theme-button"></i>
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home_container container grid section_border">
+          <div class="home_data grid">
+            <h1 class="home_title">
+              Hi, My name is<br />
+              Davide Grassitelli<br />
+              Web Developer <br />
+            </h1>
+            <div class="home_blob grid">
+              <div class="home_perfil">
+                <img src="" alt="" />
+              </div>
+              <img
+                src="assets/img/shape-wawes.svg"
+                class="home_shape-waves"
+                alt="shape-wawes"
+              />
+              <img
+                src="assets/img/shape-circle.svg"
+                alt="shape-circle"
+                class="home_shape-circle"
+              />
+            </div>
+          </div>
+          <div class="home_info">
+            <div>
+              <h3 class="home_info-title">BIO</h3>
+              <p class="home_info-description">
+                Based in Italy, passionate about designing and developing web
+                interfaces. Naturally creative, I think the best computer
+                programs are the ones that allow us to do things we couldn't do
+                on our own, yet take advantage of our creative abilities. We may
+                be good at drawing, but a computer is great for doing the same
+                task repeatedly and quickly!
+              </p>
+            </div>
+            <div>
+              <h3 class="home_info-title">RESUME</h3>
+              <a class="btn home_info-btn" href="">Download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero
+        distinctio ad natus quasi illo qui sequi consequatur repudiandae,
+        voluptatem amet vero ipsam quam doloribus vel accusamus facilis corrupti
+        aperiam neque nostrum harum, esse nam illum dolorum? Saepe labore
+        quibusdam pariatur possimus magnam cumque perspiciatis qui odio eum
+        expedita. Rerum dolorum nesciunt unde at quidem aut itaque rem
+        aspernatur id, sed sunt, architecto laboriosam eos nam pariatur enim
+        autem cumque. Itaque nobis necessitatibus dolore, quibusdam sequi ex
+        saepe doloremque qui maxime exercitationem maiores, eaque, obcaecati
+        repellat. Architecto temporibus ab doloremque, voluptatum aperiam atque
+        distinctio impedit reprehenderit quo voluptate. Nisi at perspiciatis
+        similique harum, eveniet iste ipsa delectus aliquam? Esse illo itaque
+        minus enim laboriosam dolorum cumque voluptatem laborum quam veritatis.
+        Veniam?
+      </section>
+    </main>
+  </body>
 </html>
