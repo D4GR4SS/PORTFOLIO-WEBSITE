@@ -324,7 +324,9 @@ body.dark-theme {
   row-gap: 1.5rem;
 }
 
-.home_title {
+.home_title,
+.home_title > * {
+  color: var(--title-color);
   text-align: center;
   font-size: var(--biggest-font-size);
   letter-spacing: 0.02rem;
@@ -333,18 +335,16 @@ body.dark-theme {
 
 .home_blob {
   position: relative;
-  width: 200px;
-  height: 290px;
+  width: 10.3rem;
+  height: 15rem;
   background: linear-gradient(180deg, hsla(207deg, 48%, 72%, 0), hsl(207deg, 65%, 65%));
   justify-self: center;
-  border-radius: 6.25rem;
   place-items: center;
 }
 
 .home_perfil {
-  width: 170px;
-  height: 260px;
-  border-radius: 5.5rem;
+  width: 10rem;
+  height: 14.375rem;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -438,7 +438,7 @@ body.dark-theme {
 .services_card {
   position: relative;
   width: 14.25rem;
-  height: 20.125rem;
+  height: 10rem;
   background-color: var(--container-color);
   text-align: center;
   padding: 3.5rem 1rem;
@@ -461,11 +461,11 @@ body.dark-theme {
 
 .services_border {
   width: 15.5rem;
-  height: 21.375rem;
+  height: 11rem;
   border: 2px solid var(--text-color-light);
   position: absolute;
   inset: 0;
-  left: -10px;
+  left: -0.625rem;
   margin: auto;
   z-index: -1;
   transition: opacity 0.6s ease-in-out;

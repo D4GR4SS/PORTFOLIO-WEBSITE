@@ -9,18 +9,11 @@
       href="assets/img/favicon.ico"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css"
-      integrity="sha512-CWRnZlthFAu05mm4Pu5R/ikDV/2jPo6cgmkpdtBFWUY9/mqNFuTmgwnpBWqDiIeMdn5wv1NEQFdt82/Ak+uzkg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -66,7 +59,7 @@
         </div>
 
         <div class="nav_buttons">
-          <i class="far fa-moon change-theme" id="theme-button"></i>
+          <i class="change-theme far fa-moon" id="theme-button"></i>
           <div class="nav_toggle" id="nav-toggle">
             <i class="fas fa-stream"></i>
           </div>
@@ -80,13 +73,19 @@
         <div class="home_container container grid section_border">
           <div class="home_data grid">
             <h1 class="home_title">
-              Hi, My name is<br />
               Davide Grassitelli<br />
-              Web Developer <br />
+              <a
+                href=""
+                class="typewrite"
+                data-period="2000"
+                data-type='[ "Hello World!", "I am Davide.", "I Love Design.", "I Love to Develop.", "Welcome to my Portfolio" ]'
+              >
+                <span class="wrap"></span>
+              </a>
             </h1>
             <div class="home_blob grid">
               <div class="home_perfil">
-                <img src="" alt="" />
+                <img src="assets/img/perfil-pic.png" alt="perfil picture" />
               </div>
               <img
                 src="assets/img/shape-wawes.svg"
@@ -143,7 +142,7 @@
 
           <div class="services_container container grid section">
             <div class="services_card">
-              <i class="ri-layout-4-line"></i>
+              <i class="far fa-window-restore"></i>
               <h2 class="services_title">
                 UI/UX <br />
                 Design
@@ -151,19 +150,20 @@
               <div class="services_border"></div>
             </div>
             <div class="services_card">
-              <i class="ri-code-view"></i>
+              <i class="far fa-file-code"></i>
               <h2 class="services_title">
                 Website <br />
-                Design
+                Develop
               </h2>
               <div class="services_border"></div>
             </div>
             <div class="services_card">
-              <i class="ri-projector-2-line"></i>
+              <i class="fas fa-layer-group"></i>
               <h2 class="services_title">
                 Digital <br />
                 Animator
               </h2>
+
               <div class="services_border"></div>
             </div>
           </div>
