@@ -61,6 +61,25 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
+/* SWIPER */
+let swiperProjects = new Swiper('.projects_container', {
+  loop: true,
+  spaceBetween: 24,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: -56,
+    },
+  },
+});
+
 /**  MOBILE MENU REVEAL */
 const menu = document.getElementById('nav-menu'),
   toggle = document.getElementById('nav-toggle'),
