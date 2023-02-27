@@ -22,13 +22,20 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script defer src="assets/js/scrollreveal.min.js"></script>
+    <script defer src="assets/js/swiper-bundle.min.js"></script>
     <script defer src="assets/js/main.js"></script>
     <title>Davide Grassitelli Portofolio</title>
   </head>
   <body>
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav_logo"> Davide. </a>
+        <a href="#" class="nav_logo"> D_G </a>
 
         <div class="nav_menu" id="nav-menu">
           <ul class="nav_list grid">
@@ -80,12 +87,12 @@
                 href=""
                 class="typewrite"
                 data-period="2000"
-                data-type='[ "Hello World!", "I am Davide.", "I Love Design.", "I Love to Develop.", "Welcome to my Portfolio" ]'
+                data-type='[ "Hi, I am Davide.", "Nice to Meet You.", "I Love Design.", "I Like to Develop." ]'
               >
                 <span class="wrap"></span>
               </a>
             </h1>
-            <div class="home_blob grid">
+            <div class="home_pic grid">
               <div class="home_perfil">
                 <img src="assets/img/perfil-pic.png" alt="perfil picture" />
               </div>
@@ -99,14 +106,31 @@
                 alt="shape-circle"
                 class="home_shape-circle"
               />
+
+              <ul class="home_social">
+                <a
+                  href="https://www.linkedin.com/in/davide-grassitelli-web-dev/"
+                  target="_blank"
+                  class="home_social-link"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://github.com/D4GR4SS"
+                  target="_blank"
+                  class="home_social-link"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </ul>
             </div>
           </div>
           <div class="home_info">
             <div>
               <h3 class="home_info-title">BIO</h3>
               <p class="home_info-description">
-                Based in Italy, passionate about designing and developing web
-                interfaces. Naturally creative, I think the best computer
+                Based in Italy, passionate about design fine and develop
+                funcional website. Naturally creative, I think the best computer
                 programs are the ones that allow us to do things we couldn't do
                 on our own, yet take advantage of our creative abilities. We may
                 be good at drawing, but a computer is great for doing the same
@@ -128,18 +152,18 @@
 
         <div class="skills_container container grid section_border">
           <div class="skills_items" id="frontend_items">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-sass"></i>
-            <i class="fab fa-bootstrap"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-node"></i>
-            <i class="fab fa-angular"></i>
-            <i class="fab fa-git"></i>
-            <i class="fab fa-github"></i>
-            <i class="fas fa-terminal"></i>
-            <i class="fab fa-wordpress-simple"></i>
-            <i class="fas fa-database"></i>
+            <i class="fab fa-html5 skill_item"></i>
+            <i class="fab fa-css3-alt skill_item"></i>
+            <i class="fab fa-sass skill_item"></i>
+            <i class="fab fa-bootstrap skill_item"></i>
+            <i class="fab fa-js skill_item"></i>
+            <i class="fab fa-node skill_item"></i>
+            <i class="fab fa-angular skill_item"></i>
+            <i class="fab fa-git skill_item"></i>
+            <i class="fab fa-github skill_item"></i>
+            <i class="fas fa-terminal skill_item"></i>
+            <i class="fab fa-wordpress-simple skill_item"></i>
+            <i class="fas fa-database skill_item"></i>
           </div>
 
           <div class="services_container container grid section">
@@ -172,6 +196,7 @@
         </div>
       </section>
 
+      <!-- PROJECTS SEC -->
       <section class="projects section" id="projects">
         <h2 class="section_title">Projects</h2>
         <span class="section_subtitle">Most recent works</span>
@@ -249,7 +274,7 @@
                   class="projects_img"
                 />
                 <div>
-                  <span class="projects_subtitle">Scale Studio Design</span>
+                  <span class="projects_subtitle">HTML CSS</span>
                   <h1 class="projects_title">Responsive Landing Page</h1>
                   <a
                     href="https://github.com/D4GR4SS/Responsive-Landing-Page"
@@ -314,8 +339,104 @@
           </div>
         </div>
       </section>
+
+      <!-- CONTACT SEC -->
+      <section class="contact section" id="contact">
+        <h2 class="section_title">Contact Me</h2>
+        <span class="section_subtitle">#OpenToWord</span>
+
+        <div class="contact_container container grid section_border">
+          <div class="contact_content">
+            <h3 class="contact_title">
+              <i class="far fa-comments"></i>Send me a message with your name
+              and email, <br />
+              I will reply pleasantly.
+            </h3>
+
+            <form action="" class="contact_form" id="contact-form">
+              <div class="contact_form-div">
+                <label for="name" class="contact_form-tag">Name</label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="write your name"
+                  class="contact_form-input"
+                  id="name"
+                />
+              </div>
+              <div class="contact_form-div">
+                <label for="email" class="contact_form-tag">Email</label>
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="write your email"
+                  class="contact_form-input"
+                  id="email"
+                />
+              </div>
+              <div class="contact_form-div contact_form-area">
+                <label class="contact_form-tag">Message</label>
+                <textarea
+                  class="contact_form-input"
+                  id="textarea"
+                  placeholder="write something here"
+                  name="textarea"
+                ></textarea>
+              </div>
+              <p class="contact_message" id="message"></p>
+
+              <button type="submit" class="contact_button">
+                submit <i class="far fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <footer class="footer">
+      <div class="footer_container conatiner">
+        <h1 class="footer_title">D_G</h1>
+        <p>Frontend Developer</p>
+
+        <ul class="footer_list">
+          <li><a href="#home" class="footer_link">Home</a></li>
+
+          <li><a href="#skills" class="footer_link">Skills</a></li>
+
+          <li><a href="#projects" class="footer_link">Projects</a></li>
+
+          <li><a href="#contact" class="footer_link">Contact</a></li>
+        </ul>
+
+        <ul class="footer_social">
+          <a
+            href="https://www.linkedin.com/in/davide-grassitelli-web-dev/"
+            target="_blank"
+            class="footer_social-link"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/D4GR4SS"
+            target="_blank"
+            class="footer_social-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </ul>
+
+        <span class="footer_copy">
+          Copyright &copy; Davide Grassitelli
+          <span class="date" id="date">1986</span> All rights reserved
+        </span>
+      </div>
+    </footer>
+
+    <a href="#" class="scrollup" id="scrollup">
+      <i class="fas fa-caret-up"></i>
+    </a>
   </body>
 </html>

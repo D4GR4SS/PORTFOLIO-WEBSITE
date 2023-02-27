@@ -138,3 +138,91 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
 });
+
+/************************* CONTACT FORM *************************/
+const contactForm = document.getElementById('contact-form'),
+  contactName = document.getElementById('name'),
+  contactEmail = document.getElementById('email'),
+  contactText = document.getElementById('textarea'),
+  contactMessage = document.getElementById('message');
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // Basic Validation
+
+  if (
+    contactName.value.trim() === '' ||
+    contactEmail.value.trim() === '' ||
+    contactText.value.trim() === ''
+  ) {
+    // add and remove color
+    contactMessage.classList.remove('color-blue');
+    contactMessage.classList.add('color-red');
+
+    // Show Message
+    contactMessage.textContent = 'PLEASE, WRITE EVERY INPUT FIELD';
+  } else {
+    // serviceID - templateID - #form - publicKey
+    emailjs
+      .sendForm(
+        'service_hlyjwv9',
+        'template_6mje0gc',
+        '#contact-form',
+        'ooafE1Q66qryTyeXi'
+      )
+      .then(
+        () => {
+          contactMessage.classList.add('color-blue');
+          contactMessage.textContent = 'THE MESSAGE HAS BEEN SUCCESSFULLY SENT';
+
+          setTimeout(() => {
+            contactMessage.textContent = '';
+          }, 5000);
+        },
+        (error) => {
+          alert('OPS! SOMETHING WENT WRONG', error);
+        }
+      );
+
+    // cleaning up form
+    contactName.value = '';
+    contactEmail.value = '';
+    contactText.value = '';
+  }
+};
+
+contactForm.addEventListener('submit', sendEmail);
+
+/************************* FOOTER DATE YEAR *************************/
+const date = document.getElementById('date');
+date.innerHTML = new Date().getFullYear();
+
+/************************* SCROLL UP *************************/
+const scrollUp = () => {
+  const scrollUpBtn = document.getElementById('scrollup');
+
+  window.scrollY >= 350
+    ? scrollUpBtn.classList.add('show-scroll')
+    : scrollUpBtn.classList.remove('show-scroll');
+};
+
+window.addEventListener('scroll', scrollUp);
+
+/************************* REVEALING *************************/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  // reset: true /* Animations repeat */,
+});
+
+sr.reveal(`.home_data, .projects_container, .footer_container`);
+sr.reveal(`.home_info div`, { delay: 600, origin: 'bottom', interval: 100 });
+// sr.reveal(`.home_info div`, { delay: 600, origin: 'bottom', interval: 100 });
+sr.reveal(`.skill_item:nth-child(even)`, { origin: 'left' });
+sr.reveal(`.skill_item:nth-child(odd)`, { origin: 'right' });
+sr.reveal(`.contact_content:nth-child(1)`, { origin: 'left' });
+sr.reveal(`.contact_content:nth-child(2)`, { origin: 'right' });
+sr.reveal(`.services_card`, { interval: 100 });
