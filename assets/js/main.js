@@ -215,12 +215,11 @@ const sr = ScrollReveal({
   distance: '60px',
   duration: 2500,
   delay: 400,
-  // reset: true /* Animations repeat */,
+  reset: true /* Animations repeat */,
 });
 
 sr.reveal(`.home_data, .projects_container, .footer_container`);
 sr.reveal(`.home_info div`, { delay: 600, origin: 'bottom', interval: 100 });
-// sr.reveal(`.home_info div`, { delay: 600, origin: 'bottom', interval: 100 });
 sr.reveal(`.skill_item:nth-child(even)`, { origin: 'left' });
 sr.reveal(`.skill_item:nth-child(odd)`, { origin: 'right' });
 sr.reveal(`.contact_content:nth-child(1)`, { origin: 'left' });
