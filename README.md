@@ -11,4 +11,4 @@ Simple Portfolio Project created with HTML, SCSS and JS.
 - Contact form powered with [EMailJS](https://www.emailjs.com/).
 - A small introduction of myself.
 
-(Live Demo)[https://davidegrassitelli.netlify.app/]
+[Live Demo](https://davidegrassitelli.netlify.app/)
